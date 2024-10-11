@@ -63,9 +63,20 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   transform: rotateY(180deg);
 }
 
-.simplex-link:hover {
-  color: green;
-  text-decoration: underline;
+.FF-col3-em-head {
+  position: relative;
+  bottom: 45px;
+  left: 45px;
+}
+h4.FF-col3-h4-menu {
+  position: relative;
+  right:0%;
+  text-align: center;
+  text-color: black;
+  background-color: lightblue;
+  border-radius: 5px;
+  padding-left:10%;
+  padding-right:10%;
 }
 </style>
 </head>
@@ -128,13 +139,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Simplex</b> <i class="fa-solid fa-shield"></i></h5>
-          <h6 class="w3-text-dark-gray"><i class="fa fa-check-square fa-fw w3-text-light-green"></i>  <i class="simplex-link">Adresse link til Simplex</i> <span class="w3-tag w3-light-green w3-text-white w3-round">Online</span></h6>
+          <a href="#" style="text-decoration:none"><h6 class="w3-text-green"><i class="fa fa-check-square fa-fw w3-text-light-green"></i>  <i style="text-decoration:underline">Adresse link til Simplex</i> <span class="w3-tag w3-light-green w3-text-white w3-round">Online</span></h6></a>
           <p>Lorem ipsum</p>
           <hr>
         </div>
 
         <div class="w3-container">
-          <h5 class="w3-opacity w3-hover-red"><b>Telewack</b>  <i class="fa-solid fa-triangle-exclamation"></i></h5>
+          <h5 class="w3-opacity w3-hover-text-red w3-hover-opacity-off"><b>Telewack</b>  <i class="fa-solid fa-triangle-exclamation"></i></h5>
           <h6 class="w3-text-dark-gray"><i class="fa fa-exclamation-triangle fa-fw w3-text-amber"></i>  <i>@Funkie_Hygge</i>  <span class="w3-tag w3-amber w3-round">Online</span></h6>
           <h6 class="w3-text-red"><i class="fa fa-exclamation-triangle fa-fw w3-text-red"></i>  <i style="text-decoration:line-through">@FunkieHygge</i>  <span class="w3-tag w3-red w3-round">Lukket</span></h6>
           <p>since day one</p>
@@ -254,26 +265,25 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <!-- Column 3 -->
     <div class="w3-twothird">
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-address-card w3-margin-right w3-xxlarge w3-text-teal"></i>Fuld Funkie Menu</h2>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-shopping-basket w3-margin-right w3-xxlarge w3-text-teal"></i>Fuld Menu Oversigt</h2> <br>
+        <em class="FF-col3-em-head w3-text-dark-gray">~Over Funkie's Top Kvalitets <em class="w3-text-teal">Psykedeliske</em> Produkter</em>
         
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Signal</b></h5>
-          <h6 class="w3-text-dark-gray"><i class="fa fa-exclamation-circle fa-fw w3-text-amber"></i>  @Funkie.20  <span class="w3-tag w3-amber w3-round"><i class="fas fa-hourglass-half fa-sm"></i> Offline</span></h6>
-          <h6 class="w3-text-dark-gray"><i class="fa fa-check-square fa-fw w3-text-light-green"></i>  @Funkie.999  <span class="w3-tag w3-light-green w3-text-white w3-round">Online</span></h6>
-          <p>Lorem ipsum</p>
-          <hr>
+        <br>
+        <div class="w3-third w3-container">
+          <h4 class="FF-col3-h4-menu">Tidligere Varer<h4>
+          <p>test</p>
         </div>
 
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Session</b></h5>
-          <div class="w3-panel w3-pale-green w3-topbar w3-border-green">
-            <i class="fa fa-exclamation-circle fa-fw w3-text-light-green w3-margin-top"></i><b> AccountID:</b>
-            <h6 class="w3-text-dark-gray" style="min-width:90%;word-wrap:break-word">05f65fd2dbbc203ea5c91b9e1fff63b19d94c8aec64190405e3e88a05d26013858</h6>
-          </div>
-          <span class="w3-tag w3-light-green w3-text-white w3-round">Online</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-          <hr>
+        <div class="w3-third w3-container">
+          <h4 class="FF-col3-h4-menu">Cool Menu<h4>
+          <p>test</p>
         </div>
+
+        <div class="w3-third w3-container">
+          <h4 class="FF-col3-h4-menu">Fremtidig Varer<h4>
+          <p>test</p>
+        </div>
+
       </div>
     </div>
     <!-- Column 3 -->

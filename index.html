@@ -5,67 +5,359 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/86df34cdd0.js" crossorigin="anonymous"></script>
 <!-- luahhhrpypxjmucmml@ytnhy.com -->
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+* {
+	color: #454545;
+}
+.flip-card {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  width:250px;
+  height: 400px;
+  border: 1px #f1f1f1;
+  border-style: solid;
+  box-shadow: 10px 10px lightblue;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  border: 1px #f1f1f1;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.FF-col3-productdiv {
+	background-color:rgba(0, 150, 136, 0.3);
+	color: #484848;
+	padding: 5px;
+	border-radius: 5px;
+}
+h4.FF-col3-productdiv {
+  text-align: center;
+	background-color:rgba(0, 150, 136, 0.8);
+	color: #333; 
+  border-radius: 5px;
+}
 </style>
 </head>
 <body class="w3-light-grey">
 
 <!-- Page Container -->
-<div class="w3-content w3-margin-top">
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
   <!-- The Grid -->
   <div class="w3-row-padding">
+
     <!-- Column 0 -->
     <div class="w3-third">
-      <div class="w3-white w3-text-grey w3-card-4 w3-margin-bottom">
+      <div class="w3-card-2 w3-margin-bottom w3-white">
         <div class="w3-display-container">
-          <img src="https://wallpapercave.com/mwp/hT7zcp1.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-panel w3-text-white w3-teal w3-margin-left" style="border-radius:5px 15px 25px">
-            <h2><b>Dr.H Funkie</b></h2>
+          <img src="https://wallpapercave.com/mwp/hT7zcp1.jpg" style="width:100%" alt="Too funked Picture">
+          <div class="w3-display-bottomleft w3-panel w3-teal w3-margin-left" style="border-radius:5px 15px 25px">
+            <h2><b class="w3-text-white">Dr.H Funkie</b></h2>
           </div>
         </div>
         
         <div class="w3-container">
-          <a href="https://signal.me/#eu/tdTiOLiDFhomPW7G6Oq9Krz4aOlv7U-4B_tUwrO6KNf69sDRRVlKII23UzwxUjcN" style="text-decoration:none"><p><img src="https://signal.org/brand/assets/logo_min_size.png" class="w3-round-large" style="height:25;width:25px"> <b>Signal</b>  <span class="w3-tag w3-green w3-text-white w3-round">Sikkerhed <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span></br>
-          <i>Funkie.999</i><br>
-          <i class="w3-text-red" style="text-decoration-line:line-through">Funkie.20</i></p></a>
-          
-          <br>
-          <a href="xmpp:FunkieHygge@xmpp.earth" style="text-decoration:none"><p><img src="https://xmpp.org/images/logos/xmpp-logo.svg" class="w3-round-large" style="background-color:#212529;width:25px;height:25px"> <b>XMPP Netværket</b>  <span class="w3-tag w3-green w3-text-white w3-round">Sikkerhed <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span></br>
-          <i>FunkieHygge@xmpp.earth</i></p></a>
-          <br>
-          <a href="https://simplex.chat/contact#/?v=2-7&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FliyzMRp1IwMiyvBPmwNKpgsHjL-UonxH%23%2F%3Fv%3D1-3%26dh%3DMCowBQYDK2VuAyEA4GC3S-FnZKggNqA4diacoQRwVv-B2QdyasOlasHMQQ4%253D%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion" style="text-decoration:none"><p><img src="https://f-droid.org/repo/chat.simplex.app/en-US/icon_IDdtCGG0wL-lNRFuu7OK2tHe0TTFmPfU06AgixSneLM=.png" alt="GG" class="w3-large w3-round-large" style="width:25px"> <b>Simplex</b>  <span class="w3-tag w3-green w3-text-white w3-round">Sikkerhed <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span></br>
-          <i>Klik for Simplex adresse link</i></p></a>
-          <br>
-          <p style="min-width:90%;word-wrap:break-word"><img src="https://avatars.githubusercontent.com/u/171472362?v=4" class="w3-round-large" style="width:25px"> <b>Session</b>  <span class="w3-tag w3-green w3-text-white w3-round">Sikkerhed <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
-          <i>05f65fd2dbbc203ea5c91b9e1fff63b19d94c8aec64190405e3e88a05d26013858</i></p>
-          <br>
-          <p><img src="https://f-droid.org/repo/org.telegram.messenger/en-US/icon_yf3k2arrpvOWv5oUZ3p1Eri1ThBaYEhH0lEWqjiyFO4=.png" class="w3-round-large" style="width:25px"> <b>Telewack</b>  <span class="w3-tag w3-red w3-text-white w3-round"> Sikkerhed <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span></br>
-          <i>@FunkieHygge</i></p>
-          <br>
-          <p><img src="https://play-lh.googleusercontent.com/KxeSAjPTKliCErbivNiXrd6cTwfbqUJcbSRPe_IBVK_YmwckfMRS1VIHz-5cgT09yMo=w240-h480" class="w3-round-large w3-center" style="width:25px;height:25px"> <b>Snapchat</b>  <span class="w3-tag w3-amber w3-text-white w3-round">Sikkerhed <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></span></br>
-          <p><i class="fa-solid fa-phone w3-text-white w3-round-large w3-center" style="background-color:#212529;width:25px;height:25px;padding-top:5px"></i> <b>Telefon Nummer</b>  <span class="w3-tag w3-amber w3-text-white w3-round">Sikkerhed <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></span></br>
-          <i>+45 ●●●●●●●●<br>
-          @F●●●●●●●●●●</i></p>
-          <br>
+          <p><i class="fas fa-address-card w3-margin-right w3-large w3-text-teal"></i>Kontakt Oplysninger</p>
+          <p><i class="fa fa-group fa-fw w3-margin-right w3-large w3-text-teal"></i>Åbne Salgs Grupper</p>
+          <p><i class="fa fa-shopping-basket fa-fw w3-margin-right w3-large w3-text-teal"></i>Fuld Funkie Menu</p>
+          <p><i class="fas fa-pills w3-margin-right w3-large w3-text-teal"></i>Inventar</p>
           <hr>
-          <a href="https://funkiehygge.github.io/public.txt" style="text-decoration:none"><p><i class="fa-solid fa-lock w3-text-white w3-round-large w3-center" style="background-color:#212529;width:25px;height:25px;padding:5px"></i> <b>OpenPGP</b></a></br>
-          <a href="#" style="text-decoration:none"><p><i class="fa-solid fa-link w3-text-white w3-round-large w3-center" style="background-color:#212529;width:25px;height:25px;padding:5px"></i> <b>Officille Website Links</b></a></br>
-          <br>
+          <a href="https://funkiehygge.github.io/public.txt" target="_blank" style="text-decoration:none" class="w3-tooltip"><i class="fa-solid fa-lock w3-text-white w3-round-large w3-center" style="background-color:#212529;width:23px;height:23px;padding:4px;margin-bottom:15px"></i> OpenPGP <span class="w3-text"><b>Funkie krypt B)</b></span></a></br>
+          <a href="#" style="text-decoration:none"><i class="fa-solid fa-link w3-text-white w3-round-large w3-center" style="background-color:#212529;width:23px;height:23px;padding:4px;"></i> Officille Website Links</a>
           <hr>
-          <p><em>Midlertidig portal til mine platforme mens jeg arbejder på den fulde hjemmeside.</em> Se dette som en sælgers opdateret oversigts backup til en hver platform All-In-One</b></p>
-          <p class="w3-large"><b><i class="fa-solid fa-wand-magic-sparkles w3-text-teal"></i> Hjemmesidens Funkie Score</b></p>
+          <p><em>Midlertidig portal til mine platforme mens jeg arbejder på den fulde hjemmeside.</em> Se dette som en sælgers opdateret oversigts backup til en hver platform All-In-One</p>
+          <hr>
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Hjemmesidens Funkie Score</b></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal w3-margin-bottom" style="width:88%">88% Funk</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-teal w3-margin-bottom" style="width:92%">92% Funk</div>
           </div>
         </div>
       </div>
     </div>
     <!-- Column 0 -->
+
+    <!-- Column 1 -->
+    <div class="w3-twothird">
+      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h2 class="w3-margin-top"><i class="fas fa-address-card w3-margin-right w3-xxlarge w3-text-teal"></i>Kontakt Oplysninger</h2>
+        
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Signal</b> <i class="fa-solid fa-shield-halved"></i></h5>
+          <h6><i class="fa fa-check-square fa-fw w3-text-light-green"></i><i>  @Funkie.999  </i><span class="w3-tag w3-light-green w3-text-white w3-round">Online</span></h6>
+          <h6><i class="fa fa-exclamation-circle fa-fw w3-text-amber"></i><i class="w3-text-red" style="text-decoration:line-through">  @Funkie.20  </i><span class="w3-tag w3-amber w3-round"><i class="fas fa-hourglass-half fa-sm"></i> Offline</span></h6>
+          <p>Lorem ipsum</p>
+          <hr>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>XMPP/Jabber</b> <i class="fa-solid fa-shield"></i></h5>
+          <h6><i class="fa fa-check-square fa-fw w3-text-light-green"></i><i>  FunkieHygge@xmpp.earth  </i><span class="w3-tag w3-light-green w3-text-white w3-round">Online</span></h6>
+          <p>Lorem ipsum</p>
+          <hr>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Simplex</b> <i class="fa-solid fa-shield"></i></h5>
+          <a href="#" style="text-decoration:none"><h6 class="w3-text-green"><i class="fa fa-check-square fa-fw w3-text-light-green"></i>  <i style="text-decoration:underline" class="w3-text-light-green">Adresse link til Simplex</i> <span class="w3-tag w3-light-green w3-text-white w3-round">Online</span></h6></a>
+          <p>Lorem ipsum</p>
+          <hr>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity w3-hover-opacity-off"><b class="w3-hover-text-red">Telewack</b>  <i class="fa-solid fa-triangle-exclamation"></i></h5>
+          <h6 class="w3-text-dark-gray"><i class="fa fa-exclamation-triangle fa-fw w3-text-amber"></i>  <i>@Funkie_Hygge</i>  <span class="w3-tag w3-amber w3-round">Online</span></h6>
+          <h6 class="w3-text-red"><i class="fa fa-exclamation-triangle fa-fw w3-text-red"></i>  <i style="text-decoration:line-through">@FunkieHygge</i>  <span class="w3-tag w3-red w3-round">Lukket</span></h6>
+          <p>since day one</p>
+          <hr>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Session</b> <i class="fa-solid fa-shield-halved"></i></h5>
+          <div class="w3-panel w3-pale-green w3-topbar w3-border-green">
+            <i class="fa fa-check-square fa-fw w3-text-light-green w3-margin-top"></i><b> AccountID:</b>
+            <h6 class="w3-text-dark-gray" style="min-width:90%;word-wrap:break-word"><i>05f65fd2dbbc203ea5c91b9e1fff63b19d94c8aec64190405e3e88a05d26013858</i></h6>
+          </div>
+          <span class="w3-tag w3-light-green w3-text-white w3-round">Online</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <hr>
+        </div>
+        
+        <div class="w3-container">
+          <p><img src="https://play-lh.googleusercontent.com/KxeSAjPTKliCErbivNiXrd6cTwfbqUJcbSRPe_IBVK_YmwckfMRS1VIHz-5cgT09yMo=w240-h480" class="w3-round-large w3-center" style="width:25px;height:25px"> <b>Snapchat</b>  <i class="fa-light fa-shield-halved"></i></br>
+          <p><i class="fa-solid fa-phone w3-text-white w3-round-large w3-center" style="background-color:#212529;width:25px;height:25px;padding-top:5px"></i> <b>Telefon Nummer</b>  <i class="fa-light fa-shield-halved"></i></br>
+          <i>+45 ●●●●●●●●<br>
+          @F●●●●●●●●●●</i></p>
+          <br>
+        </div>        
+      </div>
+    </div>
+    <!-- Column 1 -->
+
+    <!-- Column 2 -->
+    <div class="w3-third">
+      <div class="w3-container w3-card-2 w3-white w3-text-dark-gray w3-margin-bottom">
+        <h2 class="w3-margin-top"><i class="fa fa-group w3-margin-right w3-xxlarge w3-text-teal"></i>Grupper</h2>
+        
+				<div class="w3-row w3-center w3-margin-bottom">
+          <div style="width:48%" class="w3-half w3-card-2 w3-round-large w3-left">
+            <img src="https://wallpapercave.com/mwp/hT7zcp1.jpg" alt="Funk pic" style="aspect-ratio:1/1;object-fit:cover;width:100%" class="w3-round-large">
+            <div>
+              <h4 style="line-height:0;padding-top:15px">Funkie Store+</h4>
+              <p class="w3-opacity w3-text-black" style="line-height:1.2"><i>Aben salgs gruppe sponsoreret af Funkie Hygge TG</i></p>
+              <div class="w3-panel w3-pale-blue w3-round-large" style="margin-left:5px;margin-right:5px">
+                <i class="w3-text-dark-gray" style="word-break:break-all">https://real.long.link/Totally_Real_Funk.store</i>
+              </div>
+              <p><button class="w3-button w3-blue w3-round w3-padding-small">Find pa Signal <i class="fa-solid fa-arrow-up-right-from-square"></i></button></p>
+            </div>
+          </div>
+
+          <div style="width:48%" class="w3-half w3-card-2 w3-round-large w3-right">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.GJw-ZZ2NOIvklhutbSitYwHaHE%26pid%3DApi&f=1&ipt=14353e953ae6e8257e3f2d1897f139b4fb35e0951ea43c5942a83ba428fb6145&ipo=images" alt="Funk pic" style="aspect-ratio:1/1;object-fit:cover;width:100%" class="w3-round-large">
+            <div>
+              <h4 style="line-height:0;padding-top:15px">Fake group</h4>
+              <p class="w3-opacity w3-text-black" style="line-height:1.2";><i>Group info bla bla bla bla bla bla bla bla bla</i></p>
+              <div class="w3-panel w3-pale-red w3-round-large" style="margin-left:5px;margin-right:5px">
+                <i class="w3-text-dark-gray" style="word-break:break-all">https://real.website.link/trust_me_this_group_exist</i>
+            	</div>
+            	<p><button class="w3-button w3-red w3-round w3-padding-small">Find pa Signal <i class="fa-solid fa-arrow-up-right-from-square"></i></button></p>
+          	</div>
+          </div>
+				</div>
+
+				<div class="w3-row w3-center w3-margin-bottom">
+          <div style="width:48%" class="w3-half w3-card-2 w3-round-large w3-left">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fih1.redbubble.net%2Fimage.1365901752.8402%2Fst%2Csmall%2C507x507-pad%2C600x600%2Cf8f8f8.jpg&f=1&nofb=1&ipt=da54ee21b1fe3b65e64083908b925a1c3846129427dcc93fb1ba18e15069f7b9&ipo=images" alt="Funk pic" style="aspect-ratio:1/1;object-fit:cover;width:100%" class="w3-round-large">
+            <div>
+              <h4 style="line-height:0;padding-top:15px">Fake group1</h4>
+              <p class="w3-opacity w3-text-black" style="line-height:1.2"><i>Bla bla bla bla blaa</i></p>
+              <div class="w3-panel w3-sand w3-round-large" style="margin-left:5px;margin-right:5px">
+                <i class="w3-text-dark-gray" style="word-break:break-all">https://real.website.link/trust_me_this_group_exist</i>
+              </div>
+              <p><button class="w3-button w3-pink w3-round w3-padding-small">Find pa Signal <i class="fa-solid fa-arrow-up-right-from-square"></i></button></p>
+            </div>
+					</div>
+					
+          <div style="width:48%" class="w3-half w3-card-2 w3-round-large w3-right">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffsmedia.imgix.net%2Fd7%2Fc4%2F7d%2F30%2Fbb49%2F4dd1%2Fbd48%2F88338dfc87a3%2Fpepe-the-frog-2png.png%3Frect%3D0%2C0%2C1263%2C946%26dpr%3D2%26auto%3Dformat%2Ccompress%26q%3D75&f=1&nofb=1&ipt=142a3e8664a10c871c3d843077e45d7611fec961a5e21480715c919ad9e124d9&ipo=images" alt="Funk pic" style="aspect-ratio:1/1;object-fit:cover;width:100%" class="w3-round-large">
+            <div>
+              <h4 style="line-height:0;padding-top:15px">Fake group2</h4>
+              <p class="w3-opacity w3-text-black" style="line-height:1.2";><i>smoke n blah</i></p>
+              <div class="w3-panel w3-pale-green w3-round-large" style="margin-left:5px;margin-right:5px">
+                <i class="w3-text-dark-gray" style="word-break:break-all">https://real.website.link/trust_me_this_group_exist</i>
+              </div>
+              <p><button class="w3-button w3-green w3-round w3-padding-small">Find pa Signal <i class="fa-solid fa-arrow-up-right-from-square"></i></button></p>
+            </div>
+          </div>
+  			</div>
+  			
+        <div class="w3-container">
+        <hr>
+          <h5 class="w3-opacity"><b>Bla bla bla bla bla</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Wack -> Funk</h6>
+          <p>Legend Degree</p>
+          <hr>
+        </div>
+
+        <div class="w3-container" style="padding-bottom:50%">
+        	<div class="flip-card">
+        	  <div class="flip-card-inner">
+        	    <div class="flip-card-front">
+        	      <img src="https://wallpapercave.com/mwp/hT7zcp1.jpg" alt="Funk pic" style="aspect-ratio:1/1;object-fit:cover;width:100%" class="w3-round-large">
+        	      <h4 style="line-height:0;padding-top:15px">Funkie Store+</h4>
+        	      <p class="w3-opacity w3-text-black"><i>Aben salgs gruppe sponsoreret af Funkie Hygge TG</i></p>
+        	      <p><button class="w3-button w3-blue w3-round w3-padding-small">Find pa Signal <i class="fa-solid fa-arrow-up-right-from-square"></i></button></p>
+        	    </div>
+        	    <div class="flip-card-back">
+        	      <h1>Funkie Store+</h1>
+                <div class="w3-panel w3-pale-blue w3-round-large" style="margin-left:15px;margin-right:15px;overflow-wrap:break-word;">
+                  <i class="w3-text-dark-gray">https://signal.group/#CjQKIFqnqX8R-vxoo6SOaLAvjETGxHh1QuZrjP0_gP3kwZf3EhCEsXiIEMhK60HUAL5qv29d <br><br> https://real.long.link/Totally_Real_Funk.store</i>
+        	      </div>
+        	      <h3><em>Signal linket :o</em></h3>
+        	      <p><button class="w3-button w3-pale-blue w3-round w3-padding-small">Find pa Signal <i class="fa-solid fa-arrow-up-right-from-square"></i></button></p>
+        	    </div>
+        	  </div>
+        	</div> 
+        </div>
+      </div>
+    </div>
+    <!-- Column 2 -->
+
+    <!-- Column 3 -->
+    <div class="w3-twothird">
+      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h2 class="w3-margin-top" style="line-height:0.8"><i class="fa fa-shopping-basket w3-text-teal w3-margin-right w3-xxlarge"></i> Fuld Menu Oversigt <br><span style="font-size:15px"><em>~Over Funkie's Top Kvalitets <i class="w3-text-teal">Psykedeliske</i> Produkter</em></span></h2>
+        
+        <br>
+        <div class="w3-row-padding w3-margin-bottom">
+        	<div class="w3-half" style="width:50%">
+        		<p>Midlertidig portal til mine platforme mens jeg arbejder på den fulde hjemmeside. Se dette som en sælgers opdateret oversigts backup til en hver platform All-In-One</p>
+        		<h3 class="w3-tooltip">Yoyooo hover here!<span class="w3-text"><em>This text wasn't here before :o</em></span></h3>
+        		
+        	</div>
+        	
+        	<div class="w3-half FF-col3-productdiv" style="width:50%">
+        		<h5 style="word-wrap:break-word">L3GBEpSB74ZC1uztfK+3C/0R3txBtkZ+F9ZxNaOXCqOwkVkfI9FmfXgnLogzm9rpTpdzLWQpOf9ES8ESp72MwuvrUBTNJ5POlu8tZuuoWBoZrnUAxafvhBGJDDdh1D7iucQFK5QF4J/PwKvKgAdu//sgGMABHAfP6vVlTzCD7p8ixftoTceH6I40OW7DW6KvvYbirZO1mtZUaVVdhQbXOYX7</h5>
+        	</div>
+        </div>
+        <br>
+        
+        <!-- START 1 2 3 Produkt list START -->
+<div class="w3-row">
+        <div class="w3-third w3-container">
+          <h4 class="FF-col3-productdiv w3-margin-bottom">Tryptamine<h4>
+          
+          <div class="FF-col3-productdiv" style="line-height:1.1">
+          	<h5><b>N,N-DMT Vape</b><br><em style="font-size:14px">N,N-Dimethyltryptamine</em></h5>
+						
+						<h6><b>Pris liste</b></h6>
+						<p style="font-size:15px"> 1stk ♥ 1.500 DKK <br> 3stk ♥ 3.900 DKK <br> 5stk ♥ 5.000 DKK <br><br> <em>1.500-1.000 DKK pr. stk</em></p>
+						<p style="font-size:15px"><b>Styrke:</b> 750mg/ml <br> <b>Antal sug:</b> ~140 <br> <b>Form:</b> Færdiglavet vape alt inkl.</p>
+          </div>
+          <hr>
+          <div class="FF-col3-productdiv" style="line-height:1.1">
+          	<h5><b>Shrooms (4-HO-DMT)</b><br><em style="font-size:14px">4-Hydroxy-N,N-Dimethyltryptamine</em></h5>
+						
+						<h6><b>Pris liste</b></h6>
+						<p style="font-size:15px"> 1g ♥ 100 DKK <br> 3g ♥ 300 DKK <br> 5g ♥ 400 DKK <br> 10g ♥ 700 DKK <br><br> <em>100-70 DKK pr. g</em></p>
+						<p style="font-size:15px"><b>Styrke:</b> 4/5 <br> <b>Type:</b> Golden Funkies<br> <b>Form:</b> Tørre svampe</p>
+          </div>
+        </div>
+
+        <div class="w3-third w3-container">
+          <h4 class="FF-col3-productdiv w3-margin-bottom">Lysergamide<h4>
+          
+          <div class="FF-col3-productdiv" style="line-height:1.1">
+          	<h5><b>LSD</b><br><em style="font-size:14px">d-lysergic acid diethylamide</em></h5>
+          	
+						<h6><b>Pris liste</b></h6>
+						<p style="font-size:15px"> 100ug ♥ 100 DKK <br> 300ug ♥ 300 DKK <br> 500 ug ♥ 400 DKK <br> 1.000ug ♥ 700 DKK <br><br> <em>100-70 DKK pr. 100ug</em></p>
+						<p style="font-size:15px"><b>Styrke:</b> 100ug <br> <b>Type:</b> White fluff <br> <b>Form:</b> Tabs, Sukkerknalder, Væske</p>
+          </div>
+          <hr>
+          <div class="FF-col3-productdiv" style="line-height:1.1">
+          	<h5><b>LSA</b><br><em style="font-size:14px">d-Lysergic acid amide</em></h5>
+						<h6><b style="text-decoration:underline">Pris liste</b></h6>
+						<h6>1stk - xpris</h6>
+						<h6>10stk - xpris</h6>
+          </div>
+          <hr>
+        </div>
+				
+        <div class="w3-third w3-container">
+          <h4 class="FF-col3-productdiv w3-margin-bottom">Tidligere Varer<h4>
+          
+          <div class="FF-col3-productdiv" style="line-height:1.1">
+          	<h5><b>Produkt-real-4</b><br><em style="font-size:14px">Long ass name</em></h5>
+						<h6><b style="text-decoration:underline">Pris liste</b></h6>
+						<h6>1stk - xpris</h6>
+						<h6>10stk - xpris</h6>
+          </div>
+          <hr>
+          <div class="FF-col3-productdiv" style="line-height:1.1">
+          	<h5><b>Produkt 5</b><br><em style="font-size:14px">Long ass name</em></h5>
+						<h6><b style="text-decoration:underline">Pris liste</b></h6>
+						<h6>1stk - xpris</h6>
+						<h6>10stk - xpris</h6>
+          </div>
+        </div>
+</div>
+        <!-- END 1 2 3 Produkt list END -->
+        <hr>
+        <!-- START Detailed Produkt info START -->
+				<div class="w3-half">
+					<div class="FF-col3-productdiv w3-margin">
+						<p>textext</p>
+					</div>
+				</div>
+					
+				<div class="w3-half">
+					<div class="FF-col3-productdiv w3-margin">
+						<p>textext</p>
+					</div>
+				</div>
+				<!-- END Detailed Produkt info END -->
+      </div>
+    </div>
+    <!-- Column 3 -->
+
   </div>
   <!-- End Grid -->
 </div>
@@ -73,8 +365,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <footer class="w3-container w3-teal w3-center w3-margin-top">
   <p>Træt af at blive banned på de forskellige sider/apps? Samme her derfor laver jeg min egen hjemmeside hvor ingen panser kan bitch over mit salg B)</p>
-  </br>
-  <p></p>
 </footer>
 </body>
 </html>
